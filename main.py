@@ -8,7 +8,8 @@ SLUG_TAG = "exe4-agent-excuse-r4"
 
 
 def entry_body():
-    with open("entry.txt", encoding="utf-8") as fh:
+    src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.txt")
+    with open(src, encoding="utf-8") as fh:
         return fh.read().strip()
 
 
